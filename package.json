@@ -1,30 +1,7 @@
 {
   "name": "mst-react-router",
+  "version": "2.3.2",
   "description": "Keep your MobX State Tree state in sync with react-router",
-  "main": "dist/mst-react-router.js",
-  "types": "./types.d.ts",
-  "scripts": {
-    "lint": "eslint src __test__",
-    "test": "npm run lint && jest",
-    "test-watch": "jest --watch",
-    "clean": "rimraf dist -f",
-    "build:minified": "cross-env NODE_ENV=production MINIFY=true webpack --progress --colors",
-    "build:unminified": "cross-env NODE_ENV=production webpack --progress --colors",
-    "build": "npm run build:minified && npm run build:unminified",
-    "prepublish": "npm run clean && npm run lint && npm run test && npm run build",
-    "semantic-release": "semantic-release"
-  },
-  "jest": {
-    "collectCoverage": true,
-    "coverageDirectory": "./__test__/coverage",
-    "roots": [
-      "__test__"
-    ]
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/alisd23/mst-react-router.git"
-  },
   "keywords": [
     "history",
     "react-router",
@@ -35,12 +12,37 @@
     "state",
     "store"
   ],
-  "author": "Ali Sheehan-Dare - @im_alisd",
-  "license": "MIT",
+  "homepage": "https://github.com/alisd23/mst-react-router#readme",
   "bugs": {
     "url": "https://github.com/alisd23/mst-react-router/issues"
   },
-  "homepage": "https://github.com/alisd23/mst-react-router#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alisd23/mst-react-router.git"
+  },
+  "license": "MIT",
+  "author": "Ali Sheehan-Dare - @im_alisd",
+  "main": "dist/mst-react-router.js",
+  "types": "./types.d.ts",
+  "scripts": {
+    "build": "npm run build:minified && npm run build:unminified",
+    "build:minified": "cross-env NODE_ENV=production MINIFY=true webpack --progress --colors",
+    "build:unminified": "cross-env NODE_ENV=production webpack --progress --colors",
+    "clean": "rimraf dist -f",
+    "lint": "eslint src __test__",
+    "prepublish": "npm run clean && npm run lint && npm run test && npm run build",
+    "semantic-release": "semantic-release",
+    "test": "npm run lint && jest",
+    "test-watch": "jest --watch"
+  },
+  "jest": {
+    "collectCoverage": true,
+    "coverageDirectory": "./__test__/coverage",
+    "roots": [
+      "__test__"
+    ]
+  },
+  "dependencies": {},
   "devDependencies": {
     "@types/react-router": "^4.0.2",
     "babel-eslint": "^6.1.2",
@@ -70,9 +72,8 @@
     "webpack-cli": "^2.0.10"
   },
   "peerDependencies": {
+    "history": "^4.7.2",
     "mobx": "^4.3.1",
-    "mobx-state-tree": "^3.11.0",
-    "history": "^4.7.2"
-  },
-  "dependencies": {}
+    "mobx-state-tree": "^3.11.0"
+  }
 }
