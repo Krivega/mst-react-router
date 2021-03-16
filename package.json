@@ -1,5 +1,5 @@
 {
-  "name": "mst-react-router",
+  "name": "@krivega/mst-react-router",
   "version": "2.3.2",
   "description": "Keep your MobX State Tree state in sync with react-router",
   "keywords": [
